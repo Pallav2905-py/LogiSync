@@ -6,7 +6,7 @@ const clientSecret = 'xOpgEOnOqC85mk4H3RfWodM2167hQCjB';
 
 const getRoute = async (req, res) => {
     try {
-        const { src, destination } = req.query;
+        const { src, destination } = req.body;
 
         // Get coordinates for source and destination
         const [srcLng, srcLat] = await geoCode(src);
